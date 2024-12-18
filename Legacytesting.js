@@ -13,25 +13,17 @@ func:function()
 	);
 	new G.Unit({
 		name:'AddPop',
-	
-		startWith:0,
-	
-		//desc:'@Adds 1000 adults to the population with a click.',
+		desc:'@Adds 1000 adults to the population with a click.',
 		icon:[0,2],
-	
-		cost:{'insight':10},
+		cost:{},
 		use:{'worker':1},
 		upkeep:{'food':0.1},
 		effects:[
-			{type:'convert',from:{'herb':0.1},into:{'adult':1000},chance:1,every:3},
-		
-			
+			{type:'convert',from:{'herb':1},into:{'adult':1000},chance:1,every:3},
 		],
 		//req:{'tribalism':true},
-		category:'MyMod',
-		
-		
-	});
-	
+		category:'MyMod',	
+		}
 
+		   });
 });
