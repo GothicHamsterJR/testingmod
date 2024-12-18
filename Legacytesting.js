@@ -16,7 +16,7 @@ func:function()
 		startWith:0,
 		desc:'@Adds 1000 adults to the population with a click.',
 		icon:[0,2],
-		cost:{},
+		cost:{'insight':10},
 		use:{'worker':1},
 		upkeep:{'coin':0.1},
 		G.gain('adult',1000,'birth');
