@@ -23,7 +23,7 @@ func:function()
 		],
 		//req:{'tribalism':true},
 		category:'MyMod',	
-		}
+		})
 
 		   });
 });
