@@ -14,7 +14,7 @@ func:function()
 	new G.Unit({
 		name:'AddPop',
 		desc:'@Adds 1000 adults to the population with a click.',
-		icon:[0,2],
+		icon:[0,0,'spicySheet'],
 		cost:{},
 		use:{'worker':1},
 		upkeep:{'food':0.1},
