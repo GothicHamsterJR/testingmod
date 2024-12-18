@@ -3,7 +3,12 @@ name:'Add Population',
 author:'GothicHamster',
 desc:'A simple example mod that adds population at the click of a button.',
 engineVersion:1,
-manifest:'modManifest.js',
+G.DeclareManifest({
+name:'Add Population',
+updates:{
+	'Add Population*':'mod.js',
+}
+});
 requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},
 func:function()
