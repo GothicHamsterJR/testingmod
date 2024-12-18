@@ -8,7 +8,7 @@ requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},
 func:function()
 {
-	new G.unitCategories.splice({
+	G.unitCategories.splice({
 		(1, 0, {id:'MyMod',name:'MyMod'}),
 	});
 	new G.Unit({
