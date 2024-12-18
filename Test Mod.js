@@ -20,7 +20,7 @@ func:function()
 		effects:[
 			{type:'convert',from:{'herb':1},into:{'adult':1000},chance:1,every:3},
 		],
-		//req:{'tribalism':true},
+		req:{'tribalism':true},
 		category:'MyMod',	
 		});
 	}
