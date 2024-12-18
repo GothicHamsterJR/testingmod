@@ -18,7 +18,7 @@ func:function()
 		use:{'worker':1},
 		upkeep:{'food':0.1},
 		effects:[
-			{type:'convert',from:{'herb':1},into:{'adult':100}chance:1,every:300},
+			{type:'convert',from:{'herb':1},into:{'adult':100},chance:1,every:300},
 		],
 		req:{'tribalism':true},
 		category:'MyMod',	
