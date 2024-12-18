@@ -13,7 +13,7 @@ func:function()
 	});
 	new G.Unit({
 		name:'AddPop',
-		startWith:0
+		startWith:0,
 		desc:'@Adds 1000 adults to the population with a click.',
 		icon:[0,2],
 		cost:{},
