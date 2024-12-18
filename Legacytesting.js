@@ -6,7 +6,7 @@ engineVersion:1,
 G.DeclareManifest({
 name:'Add Population',
 updates:{
-	'Add Population*':'mod.js',
+	'Add Population*':'Legacytesting.js',
 }
 });
 requires:['Default dataset*'],
@@ -29,5 +29,6 @@ func:function()
 		req:{'tribalism':true},
 		category:'MyMod',
 	});
+	
 }
 });
