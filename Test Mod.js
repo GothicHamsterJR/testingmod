@@ -12,13 +12,13 @@ func:function()
 	
 	new G.Unit({
 		name:'AddPop',
-		desc:'@Adds 1000 adults to the population with a click.',
+		desc:'@Adds 100 adults to the population with a click.',
 		icon:[0,0,'spicySheet'],
 		cost:{},
 		use:{'worker':1},
 		upkeep:{'food':0.1},
 		effects:[
-			{type:'convert',from:{'herb':1},into:{'adult':1000},chance:1,every:3},
+			{type:'convert',from:{'herb':1},into:{'adult':100}},
 		],
 		req:{'tribalism':true},
 		category:'MyMod',	
