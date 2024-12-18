@@ -8,9 +8,9 @@ requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},
 func:function()
 {
-	G.unitCategories.splice({
+	G.unitCategories.splice(
 		(1, 0, {id:'MyMod',name:'MyMod'}),
-	});
+	);
 	new G.Unit({
 		name:'AddPop',
 		startWith:0,
@@ -18,7 +18,7 @@ func:function()
 		icon:[0,2],
 		cost:{'insight':10},
 		use:{'worker':1},
-		upkeep:{'coin':0.1},
+		upkeep:{'food':0.1},
 		G.gain('adult',1000,'birth');
 		req:{'tribalism':true},
 		category:'MyMod',
