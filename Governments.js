@@ -14,7 +14,8 @@ func:function()
 	new G.ChooseBox({
 		name:'government box',
 		context:'tech',
-
+	})
+		
 	//Policies
 	
 	new G.Policy({
