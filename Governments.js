@@ -11,7 +11,7 @@ func:function()
 	new G.Policy({
 		name:'eat herbs',
 		desc:'[herb]s are eaten, which may be unhealthy.',
-		icon:[6,4,5,7],
+		icon:[6,12,4,6],
 		cost:{'influence':1},
 		startMode:'on',
 		req:{'rules of food':false},
