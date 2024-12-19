@@ -11,13 +11,9 @@ func:function()
 	
 	//Categories
 	
-	G.governmentCategories.push(
-		{id:'test1',name:'test1'},
-		{id:'test2',name:'test2'},
-		{id:'test3',name:'test4'},
-		{id:'test5',name:'test5'},
-		{id:'test6',name:'test6'}
-	);
+	new G.ChooseBox({
+		name:'government box',
+		context:'tech',
 
 	//Policies
 	
