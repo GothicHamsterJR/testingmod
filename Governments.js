@@ -10,11 +10,17 @@ func:function()
 {
 	new G.Policy({
 		name:'eat herbs',
-		desc:'Your people will eat [herb]s when other [food] gets scarce, with dire consequences for health and morale.',
-		icon:[6,12,3,7],
+		desc:'[herb]s are eaten, which may be unhealthy.',
+		icon:[6,12,5,7],
 		cost:{'influence':1},
 		startMode:'on',
 		req:{'rules of food':false},
+		effects:[
+			{type:'make part of',what:['herb'],parent:'food'},
+		],
+		effectsOff:[
+			{type:'make part of',what:['herb'],parent:''},
+		],
 		category:'food',
 	});
 }
