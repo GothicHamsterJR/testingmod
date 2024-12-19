@@ -1,11 +1,3 @@
- let my_butt = document.getElementsById("sectionTabs");
-// Create a new element
-const newElement = document.createElement("div");
-newElement.textContent = "This is a new paragraph"; 
-
-// Append the new element to the div
-my.appendChild(newElement);
-
 G.AddData({
 name:'GovernmentMod',
 author:'GothicHamster',
