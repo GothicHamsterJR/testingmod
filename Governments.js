@@ -16,13 +16,6 @@ requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},
 func:function()
 {
-	
-	//Categories
-	
-	new G.ChooseBox({
-		name:'government box',
-		context:'tech',
-	})
 		
 	//Policies
 	
