@@ -12,7 +12,7 @@ func:function()
 	
 	new G.Unit({
 		name:'AddPop',
-		desc:'@Adds 100 adults to the population with a click.',
+		desc:'@Adds 10 adults to the population with a click.',
 		icon:[0,0,'spicySheet'],
 		cost:{},
 		use:{'worker':1},
@@ -22,6 +22,22 @@ func:function()
 		],
 		req:{'tribalism':true},
 		category:'MyMod',	
+		});
+	
+	new G.Policy({
+		name:'eat herbs',
+		desc:'[herb]s are eaten, which may be unhealthy.',
+		icon:[6,12,4,6],
+		cost:{'influence':1},
+		startMode:'on',
+		req:{'rules of food':true},
+		effects:[
+			{type:'make part of',what:['herb'],parent:'food'},
+		],
+		effectsOff:[
+			{type:'make part of',what:['herb'],parent:''},
+		],
+		category:'food',
 		});
 	}
 });
