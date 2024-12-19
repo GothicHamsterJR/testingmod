@@ -15,12 +15,6 @@ func:function()
 		cost:{'influence':1},
 		startMode:'on',
 		req:{'rules of food':false},
-		effects:[
-			{type:'make part of',what:['herb'],parent:'food'},
-		],
-		effectsOff:[
-			{type:'make part of',what:['herb'],parent:''},
-		],
 		category:'food',
 	});
 }
