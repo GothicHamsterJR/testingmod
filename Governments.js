@@ -1,34 +1,27 @@
 G.AddData({
-name:'GovernmentMod',
-author:'GothicHamster',
-desc:'A mod that adds governments.',
+name:'Heritage mod',
+author:'geekahedron',
+desc:'A collection of mods and improvements for NeverEnding Legacy.',
 engineVersion:1,
-manifest:0,
+manifest:'https://rawgit.com/geekahedron/heritage/master/heritageModManifest.js',
 requires:['Default dataset*'],
-sheets:{'spicySheet':'img/spicyModIconSheet.png'},
+sheets:{
+	'heritageSheet':'https://cdn.rawgit.com/geekahedron/heritage/018c0de80c706c0a2bae3ce11d71b1e4fadb1cbc/img/heritageModIconSheet.png',
+},
 func:function()
 {
-		
-	//Policies
-	
-	new G.Policy({
-		name:'eat herbs',
-		desc:'[herb]s are eaten, which may be unhealthy.',
-		icon:[6,12,4,6],
-		cost:{'influence':1},
-		startMode:'on',
-		req:{'rules of food':true},
-		effects:[
-			{type:'make part of',what:['herb'],parent:'food'},
-		],
-		effectsOff:[
-			{type:'make part of',what:['herb'],parent:''},
-		],
-		category:'food',
-	});
-}
-//other mod startsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-G.hSetting=[];
+/************************************************
+ *           HERITAGE SETTINGS API              *
+ ************************************************
+ *
+ * Use hidden in-game policies as 'settings' for this mod.
+ * We could use actual settings, but the main codebase says mods should not do that (no explanation as to why not -- it works fine -- but hey).
+ * Also, settings are not part of the "checkReq" list, only policies, traits, techs, and units, so we want to do it this way anyway.
+ *
+ */	
+
+// For starters, basically wraps/mimics the default policy definition, with a few additions
+	G.hSetting=[];
 	G.hSettingByName=[];
 	G.hSettingCategory=[];
 	G.HSettingsLoaded=false;
@@ -160,12 +153,20 @@ G.hSetting=[];
 			console.error('No such hSetting category: ',obj.id);
 		}
 	}
-G.addHSettingCategory({
+
+/************************************************
+ *             HERITAGE SETTINGS                *
+ ************************************************
+ *
+ * Add initial category for heritage mod built-in settings.
+ * Other mods and additions can create their own categories by the same means.
+ */
+	G.addHSettingCategory({
 		displayName:'Heritage modpack options',
 		desc:'Gameplay options from the Heritage modpack'
 	});
-// tabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-G.writeHSettingButton=function(obj)
+	
+	G.writeHSettingButton=function(obj)
 	{
 		G.pushCallback(function(obj){return function(){
 			var div=l('hsettingButton-'+obj.id);
@@ -257,48 +258,5 @@ G.writeHSettingButton=function(obj)
 		}
 		return str;
 	}
-
-	// only add the tab once per page load (otherwise tab will duplicate itself with new game or mod reloading)
-	for (t in G.tabs) {
-		if (G.tabs[t].name=='Heritage')
-		{
-			G.HSettingsLoaded = true;
-		}
-	}
-
-	if (!G.HSettingsLoaded)
-	{
-		G.tabs.push({
-			name:'Heritage',
-			id:'heritage',
-			popup:true,
-			addClass:'right',
-			desc:'Options and information about the Heritage mod pack.'
-		});
-		// Don't make assumptions about the existing tabs
-		// (or another mod that does the same thing)
-		// make sure everything is numbered and built properly
-		for (var i=0;i<G.tabs.length;i++){G.tabs[i].I=i;}
-		G.buildTabs();
-		
-	}
-
-	G.tabPopup['heritage']=function()
-	{
-		var str='';
-		
-		// disclaimer blurb for the top
-		str+='<div class="par">'+
-		'<b>NeverEnding Heritage</b> is a modpack for NeverEnding Legacy by <a href="https://github.com/geekahedron/heritage" target="_blank">geekahedron</a>.'+
-		'It is currently in early alpha, may feature strange and exotic bugs, and may be updated at any time.</div>'+
-		'<div class="par">While in development, the modpack may be unstable and subject to changes, but the overall goal is to '+
-		'expand and improve the legacy with flexible, balanced, user-created content and improvements to existing mechanics.</div>'+
-		'<div class="fancyText title">Heritage Modpack</div>'+
-		G.writeHSettingCategories()+
-		'<div class="divider"></div>'+
-		'<div class="buttonBox">'+
-		G.dialogue.getCloseButton()+
-		'</div>';
-		return str;
-	}
+}
 });
