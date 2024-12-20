@@ -28,6 +28,7 @@ func:function()
 	});
 }
 //other mod startsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+{
 G.hSetting=[];
 	G.hSettingByName=[];
 	G.hSettingCategory=[];
@@ -160,6 +161,7 @@ G.hSetting=[];
 			console.error('No such hSetting category: ',obj.id);
 		}
 	}
+}
 // tabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 G.writeHSettingButton=function(obj)
 	{
