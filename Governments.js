@@ -28,7 +28,6 @@ func:function()
 	});
 }
 //other mod startsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-{
 G.hSetting=[];
 	G.hSettingByName=[];
 	G.hSettingCategory=[];
@@ -161,7 +160,6 @@ G.hSetting=[];
 			console.error('No such hSetting category: ',obj.id);
 		}
 	}
-}
 G.addHSettingCategory({
 		displayName:'Heritage modpack options',
 		desc:'Gameplay options from the Heritage modpack'
