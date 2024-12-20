@@ -162,6 +162,10 @@ G.hSetting=[];
 		}
 	}
 }
+G.addHSettingCategory({
+		displayName:'Heritage modpack options',
+		desc:'Gameplay options from the Heritage modpack'
+	});
 // tabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 G.writeHSettingButton=function(obj)
 	{
