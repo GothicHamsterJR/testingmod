@@ -1,13 +1,11 @@
 G.AddData({
-name:'Heritage mod',
-author:'geekahedron',
+name:'Government mod',
+author:'GothicHamster',
 desc:'A collection of mods and improvements for NeverEnding Legacy.',
 engineVersion:1,
-manifest:'https://rawgit.com/geekahedron/heritage/master/heritageModManifest.js',
+manifest:0,
 requires:['Default dataset*'],
-sheets:{
-	'heritageSheet':'https://cdn.rawgit.com/geekahedron/heritage/018c0de80c706c0a2bae3ce11d71b1e4fadb1cbc/img/heritageModIconSheet.png',
-},
+sheets:{'spicySheet':'img/spicyModIconSheet.png'},
 func:function()
 {
 /************************************************
@@ -162,8 +160,8 @@ func:function()
  * Other mods and additions can create their own categories by the same means.
  */
 	G.addHSettingCategory({
-		displayName:'Heritage modpack options',
-		desc:'Gameplay options from the Heritage modpack'
+		displayName:'Government modpack options',
+		desc:'Gameplay options from the Government modpack'
 	});
 	
 	G.writeHSettingButton=function(obj)
